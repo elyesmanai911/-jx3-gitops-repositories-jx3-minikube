@@ -16,6 +16,8 @@ spec:
     provider: minikube
   environments:
   - key: dev
+    owner: elyesmanai911
+    repository: -jx3-gitops-repositories-jx3-minikube
   - key: staging
   - key: production
   ingress:
@@ -26,6 +28,8 @@ spec:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: elyesmanai911
   repository: bucketrepo
   secretStorage: local
   vault: {}
