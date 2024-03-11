@@ -9,6 +9,7 @@ spec:
     providerKind: github
     repositories:
     - name: FirstTest
+    - name: test2
     scheduler: in-repo
   jenkinsServers:
   - groups:
