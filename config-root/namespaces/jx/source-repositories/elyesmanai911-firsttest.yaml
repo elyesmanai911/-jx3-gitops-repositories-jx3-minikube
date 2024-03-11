@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: elyesmanai911
+    provider: github
+    repository: firsttest
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: elyesmanai911-firsttest
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/elyesmanai911/FirstTest.git
+  org: elyesmanai911
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: FirstTest
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/elyesmanai911/FirstTest

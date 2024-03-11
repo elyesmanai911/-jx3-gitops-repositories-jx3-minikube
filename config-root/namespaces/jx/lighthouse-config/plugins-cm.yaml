@@ -6,6 +6,10 @@ data:
       repos:
       - elyesmanai911/-jx3-gitops-repositories-jx3-minikube
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - elyesmanai911/FirstTest
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -21,6 +25,11 @@ data:
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
         name: lighthouse-webui-plugin
+      elyesmanai911/FirstTest:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
     heart: {}
     label:
       additional_labels: null
@@ -28,6 +37,20 @@ data:
     plugins:
       elyesmanai911/-jx3-gitops-repositories-jx3-minikube:
       - config-updater
+      - approve
+      - assign
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - cat
+      - dog
+      - pony
+      elyesmanai911/FirstTest:
       - approve
       - assign
       - help
@@ -53,6 +76,11 @@ data:
     - repos:
       - elyesmanai911/-jx3-gitops-repositories-jx3-minikube
       trusted_org: elyesmanai911
+    - repos:
+      - elyesmanai911/FirstTest
+      trusted_org: elyesmanai911
+    welcome:
+    - message_template: Welcome
 kind: ConfigMap
 metadata:
   creationTimestamp: null
